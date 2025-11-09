@@ -1,0 +1,44 @@
+# Configuration for testing with tiny synthetic dataset
+# Use this to quickly test if everything works before downloading full DOTA
+
+seed: 42
+output_dir: outputs/tiny_test
+
+dataset:
+  name: DOTA
+  root: data/tiny_DOTA
+  train_ann: annotations_train.json
+  val_ann: annotations_val.json
+  img_dir: images
+  num_classes: 15
+  classes: ["plane","ship","storage-tank","baseball-diamond","tennis-court","basketball-court","ground-track-field","harbor","bridge","large-vehicle","small-vehicle","helicopter","roundabout","soccer-ball-field","swimming-pool"]
+  img_size: 1024
+
+model:
+  backbone: "open_clip_vit_b_16"  # or use "torchvision_resnet50" for faster testing
+  hidden_dim: 256
+  num_queries: 50  # Reduced from 100 for faster testing
+  nheads: 8
+  enc_layers: 2  # Reduced from 4 for faster testing
+  dec_layers: 2  # Reduced from 4 for faster testing
+  dim_feedforward: 1024
+  dropout: 0.1
+
+train:
+  epochs: 5  # Just 5 epochs for quick test
+  batch_size: 2  # Small batch for M1
+  lr: 2.0e-4
+  weight_decay: 1.0e-4
+  warmup_epochs: 1
+  clip_grad_norm: 1.0
+  amp: true
+
+loss:
+  cls_weight: 2.0
+  bbox_l1_weight: 5.0
+  angle_weight: 2.0
+  no_object_weight: 0.1
+
+eval:
+  topk: 50  # Reduced from 100
+  conf_threshold: 0.3

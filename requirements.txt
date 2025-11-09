@@ -1,0 +1,40 @@
+# Core PyTorch - optimized for Apple Silicon M1/M2
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Transformers and Vision Models
+transformers>=4.44.0
+open-clip-torch>=2.24.0
+timm>=1.0.9
+
+# Tensor Operations
+einops>=0.7.0
+
+# Data Processing & Augmentation
+albumentations>=1.4.8
+opencv-python-headless>=4.10.0  # headless version for M1 compatibility
+Pillow>=10.0.0
+
+# Configuration
+PyYAML>=6.0.1
+
+# Dataset Download Utilities
+requests>=2.32.3
+gdown>=5.2.0
+py7zr>=0.21.0
+kaggle>=1.6.17
+
+# Geometry & COCO Utils
+shapely>=2.0.4
+pycocotools>=2.0.8
+
+# Training Enhancements
+peft>=0.13.0
+accelerate>=1.0.0
+
+# Experiment Tracking & Visualization
+tensorboard>=2.17.0
+wandb>=0.17.7
+
+# Scientific Computing (explicitly specified for M1)
+numpy>=1.24.0

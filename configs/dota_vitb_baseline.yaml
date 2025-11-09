@@ -1,0 +1,41 @@
+seed: 42
+output_dir: outputs/dota_vitb_baseline
+
+dataset:
+  name: DOTA
+  root: data/DOTA
+  train_ann: annotations_train.json
+  val_ann: annotations_val.json
+  img_dir: images
+  num_classes: 15  # adjust to your split/classes
+  classes: ["plane","ship","harbor","bridge","vehicle","small-vehicle","large-vehicle","storage-tank","soccer-ball-field","tennis-court","basketball-court","baseball-diamond","ground-track-field","helicopter","roundabout"]
+  img_size: 1024
+
+model:
+  backbone: "open_clip_vit_b_16"  # options: open_clip_vit_b_16 | timm_vit_base_patch16_224 | torchvision_resnet50
+  hidden_dim: 256
+  num_queries: 100
+  nheads: 8
+  enc_layers: 4
+  dec_layers: 4
+  dim_feedforward: 1024
+  dropout: 0.1
+
+train:
+  epochs: 50
+  batch_size: 4
+  lr: 2.0e-4
+  weight_decay: 1.0e-4
+  warmup_epochs: 1
+  clip_grad_norm: 1.0
+  amp: true
+
+loss:
+  cls_weight: 2.0
+  bbox_l1_weight: 5.0
+  angle_weight: 2.0
+  no_object_weight: 0.1
+
+eval:
+  topk: 100
+  conf_threshold: 0.3

@@ -1,0 +1,158 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# PyTorch & Model Files
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.h5
+*.pb
+*.onnx
+*.tflite
+*.hdf5
+*.pkl
+*.pickle
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.backup
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Data & Datasets
+data/
+datasets/
+data/DOTA/
+data/DOTA_raw/
+data/tiny_DOTA/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Training Outputs
+outputs/
+checkpoints/
+runs/
+logs/
+results/
+vis/
+visualizations/
+tiny_vis/
+tiny_test/
+
+# Experiment Tracking
+wandb/
+mlruns/
+tensorboard/
+events.out.tfevents.*
+
+# Kaggle Credentials
+.kaggle/
+kaggle.json
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# Temporary Files
+*.tmp
+*.temp
+*.log
+*.cache
+*.swp
+*~
+
+# Testing & Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation Builds
+docs/_build/
+site/
+
+# Media Files (uncomment if needed)
+# *.jpg
+# *.jpeg
+# *.png
+*.mp4
+*.avi
+*.mov
+
+# Project Specific
+/data/
+/outputs/
+test_output/
+
+# Markdown files (except README.md)
+*.md
+!README.md
