@@ -45,9 +45,9 @@ python create_tiny_dataset.py --output data/tiny_DOTA
 python train.py --config configs/tiny_test.yaml
 ```
 
-**Device will auto-select: CUDA > MPS > CPU** ✨
+**Device will auto-select: CUDA > MPS > CPU** 
 
-### 3. Get DOTA Dataset
+### 3.Get DOTA Dataset
 
 - **Download**: https://captain-whu.github.io/DOTA/dataset.html
 - Register and download DOTA v1.0 (train + val)
@@ -58,7 +58,7 @@ python scripts/prepare_dota.py --src data/DOTA_raw/train --dst data/DOTA --split
 python scripts/prepare_dota.py --src data/DOTA_raw/val --dst data/DOTA --split val
 ```
 
-### 4. Train
+### 4.Train
 
 ```bash
 # Start training (device auto-detected)
@@ -136,7 +136,7 @@ Detection Heads:
 
 **Note:** CUDA is significantly faster for this workload.
 
-## 🎨 Dataset: DOTA
+##  Dataset: DOTA
 
 - **Images**: 2,806 aerial images
 - **Objects**: 188,282 instances
