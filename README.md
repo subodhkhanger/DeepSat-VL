@@ -15,7 +15,7 @@ A PyTorch-based transformer model for oriented object detection in satellite ima
 - ** Easy Setup**: Test with synthetic data before downloading 10GB+ dataset
 - ** Multiple Backbones**: CLIP ViT, TIMM ViT, ResNet50
 - ** 15 Object Classes**: Planes, ships, vehicles, buildings, and more
-- **⚡ Production Ready**: Training, evaluation, and visualization included
+- ** Production Ready**: Training, evaluation, and visualization included
 
 ## Quick Start
 
